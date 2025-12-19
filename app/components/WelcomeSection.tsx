@@ -42,7 +42,7 @@ export default function WelcomeSection() {
             ) : (
               <>
                 <div className="absolute left-7 top-1/2 -translate-y-1/2">
-                   <FaGoogle className="text-white text-sm" />
+                   <FaGoogle className="text-white text-lg" />
                 </div>
                 <span className="w-full text-center text-xs block pl-2">Continue with Google</span>
               </>
@@ -60,7 +60,7 @@ export default function WelcomeSection() {
             ) : (
               <>
                 <div className="absolute left-7 top-1/2 -translate-y-1/2">
-                   <FaMicrosoft className="text-sm" />
+                   <FaMicrosoft className="text-lg" />
                 </div>
                 <span className="w-full text-center text-xs block pl-6">Continue with Microsoft</span>
               </>
