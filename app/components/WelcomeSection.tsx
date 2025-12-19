@@ -31,12 +31,12 @@ export default function WelcomeSection() {
   };
 
   return (
-    <motion.div 
-      className="relative w-full h-[650px] flex items-center justify-center overflow-hidden"
-      variants={fadeInUp}
-      initial="initial"
-      animate="animate"
-    >
+ <motion.div 
+  className="relative w-full min-h-[650px] md:h-[650px] flex items-center justify-center overflow-hidden"
+  variants={fadeInUp}
+  initial="initial"
+  animate="animate"
+>
 
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image src="/bg_img.png" alt="Background" fill priority className="object-cover" />

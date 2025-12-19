@@ -148,13 +148,12 @@ export default function GridLayout() {
   ];
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="initial"
-      animate="animate"
-      
-      className="flex flex-row w-full gap-2 px-0"
-    >
+  <motion.div
+    variants={staggerContainer}
+    initial="initial"
+    animate="animate"
+    className="flex flex-col md:flex-row w-full gap-4 md:gap-2 px-4 md:px-0"
+  >
       {columns.map((columnItems, colIndex) => {
         const isStaggeredColumn = colIndex === 1 || colIndex === 3;
         
