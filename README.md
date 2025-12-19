@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+Forescribe | Enterprise SaaS Landing Page
+A high-performance, pixel-perfect landing page built with Next.js 16 (App Router) and TypeScript. This project features a sophisticated staggered grid system, custom animations, and robust form handling.
+🚀 Live Demo
+Insert your Vercel/Netlify link here
 
-First, run the development server:
+🛠️ Tech Stack
+Framework: Next.js 16 (App Router)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Language: TypeScript (Strict Mode)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Styling: Tailwind CSS (Utility-first CSS)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Animations: Framer Motion (Orchestrated entrance & hover states)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Forms: React Hook Form (Validation & State management)
 
-## Learn More
+Icons: React Icons (Official Brand Assets)
 
-To learn more about Next.js, take a look at the following resources:
+📦 Installation & Setup
+1.Clone the repository:
+  Bash: git clone https://github.com/your-username/forescribe.git 
+        cd forescribe
+2.Install dependencies:
+  Bash: npm install
+3.Run the development server:
+  Bash: npm run dev
+Open http://localhost:3000 to view the result.
+📂 Directory Structure
+The project follows a modular, component-based architecture:
+├── app/
+│   ├── components/         # Reusable UI components (WelcomeSection, GridLayout, etc.)
+│   ├── animations/         # Framer Motion variants and keyframes
+│   ├── layout.tsx          # Global providers and metadata
+│   └── page.tsx            # Main entry point with dynamic imports
+├── public/                 # Static assets (Optimized images, brand logos)
+├── tailwind.config.ts      # Custom theme, shimmer animations, and brand colors
+└── tsconfig.json           # TypeScript configuration
+💡 Additional Features & Improvements
+Beyond the basic requirements, the following enhancements were implemented to ensure production-grade quality:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+OAuth Form Validation: Integrated react-hook-form to handle a mandatory "Terms of Service" checkbox. Even though the login is Social-based, this ensures legal compliance and demonstrates advanced state handling.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Staggered Masonry Grid: Implemented a custom 4-3-4-3-4 pattern grid that uses CSS break-properties and Framer 
+Motion's staggerChildren for a "waterfall" loading effect.
 
-## Deploy on Vercel
+Performance Optimization: * Dynamic Imports: Heavily used next/dynamic to split code chunks, reducing the initial JS bundle size.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next Image: Automated WebP conversion and priority loading for the Hero background to achieve high LCP (Largest Contentful Paint) scores.
+🔍 Assumptions
+During development, the following assumptions were made:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication Flow: Since this is a frontend-focused assignment, the Google and Microsoft buttons simulate an API call with a 2-second loading state.
+
+Asset Handling: External brand logos (Notion, Figma, etc.) are treated as local assets for maximum loading speed and to prevent 404s from external CDNs.
+
+Responsiveness: The layout assumes a modern desktop-first approach but uses Tailwind's responsive prefixes to collapse the 5-column grid into a single column for mobile devices.
+✅ Requirements Checklist
+[x] React Hooks: Managed loading states with useState and form validation with useForm.
+
+[x] Advanced Animations: Used AnimatePresence for error messages and motion.div for layout transitions.
+
+[x] TypeScript: Full type safety for component props and form inputs.
+
+[x] Performance: Optimized Image components and Dynamic components implemented.
+
+Micro-interactions: Custom "Shimmer" gradient effect on the primary CTA buttons and glassmorphism (backdrop-blur) on the authentication card.
