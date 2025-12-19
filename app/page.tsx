@@ -1,6 +1,4 @@
 import dynamic from "next/dynamic";
-import dynamic from "next/dynamic";
-
 const WelcomeSection = dynamic(() => import("./components/WelcomeSection"));
 const GridLayout = dynamic(() => import("./components/GridLayout"));
 
