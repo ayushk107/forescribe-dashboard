@@ -1,18 +1,27 @@
 import dynamic from "next/dynamic";
-const WelcomeSection = dynamic(() => import("./components/WelcomeSection"));
-const GridLayout = dynamic(() => import("./components/GridLayout"));
+import Image from "next/image";
+import Logo from "./components/Logo"; 
 
+const WelcomeSection = dynamic(() => import("./components/WelcomeSection"));
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen flex flex-col items-center overflow-x-hidden">
-       
-       <div className="w-full">
-         <WelcomeSection />
+    <main className="relative h-screen w-screen flex items-center justify-center overflow-hidden bg-black">
+       <div className="absolute inset-0 z-0">
+         <Image 
+           src="/back_img.png" 
+           alt="Background" 
+           fill 
+           priority 
+           quality={100}
+           className="object-cover object-center" 
+         />
+         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/90 to-[#8B3DFF]/88 z-10 pointer-events-none" />
        </div>
-
-       {/* Added 'px-4' for mobile padding so grid doesn't touch edges */}
-       <div className="w-full max-w-[1600px] px-4 md:px-8 pb-20">
-         <GridLayout />
+       <div className="absolute top-6 left-10 md:top-8 md:left-24 z-20">
+         <Logo />
+       </div>
+       <div className="relative z-30 w-full px-4 flex justify-center">
+         <WelcomeSection />
        </div>
        
     </main>

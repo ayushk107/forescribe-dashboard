@@ -1,11 +1,10 @@
 import Image from "next/image";
-
 export default function Logo() {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-0">
       <div className="relative w-10 h-10">
          <Image 
-           src="/forescribe_logo.jpg" 
+           src="/fsm-logo.png" 
            alt="Forescribe Logo" 
            fill 
            className="object-contain" 
