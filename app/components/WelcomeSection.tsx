@@ -31,13 +31,12 @@ export default function WelcomeSection() {
   };
 
   return (
- <motion.div 
-  className="relative w-full min-h-[650px] md:h-[650px] flex items-center justify-center overflow-hidden"
-  variants={fadeInUp}
-  initial="initial"
-  animate="animate"
->
-
+    <motion.div 
+      className="relative w-full min-h-[650px] md:h-[650px] flex items-center justify-center overflow-hidden"
+      variants={fadeInUp}
+      initial="initial"
+      animate="animate"
+    >
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image src="/bg_img.png" alt="Background" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/87 to-[#3b0764]/90"></div>
@@ -48,7 +47,7 @@ export default function WelcomeSection() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center gap-4">
-        <div className="bg-black/40 backdrop-blur-x1 rounded-2xl shadow-2xl border border-white/10 flex flex-col items-center w-[320px] py-4 px-6">
+        <div className="bg-black/40 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 flex flex-col items-center w-[320px] py-4 px-6">
           <div className="mb-2 relative w-10 h-10">
              <Image src="/forescribe_logo.jpg" alt="Forescribe" fill className="object-contain" />
           </div>
@@ -58,7 +57,6 @@ export default function WelcomeSection() {
           </div>
 
           <div className="w-full space-y-3">
-           
             <div className="flex flex-col gap-1">
               <label className="flex items-center gap-2 cursor-pointer group">
                 <div className="relative flex items-center">
@@ -87,13 +85,15 @@ export default function WelcomeSection() {
               </AnimatePresence>
             </div>
 
+            {/* GOOGLE BUTTON */}
             <motion.button 
               type="button" 
               onClick={() => handleButtonClick("google")}
               disabled={loadingProvider !== null}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="relative group w-full bg-[#8B3DFF] hover:bg-[#7b36e0] text-white py-2.5 rounded-lg font-medium transition-all text-xs shadow-lg shadow-purple-500/20 overflow-hidden flex items-center justify-center gap-2"
+              // ✅ CHANGED: text-xs -> text-sm
+              className="relative group w-full bg-[#8B3DFF] hover:bg-[#7b36e0] text-white py-2.5 rounded-lg font-medium transition-all text-sm shadow-lg shadow-purple-500/20 overflow-hidden flex items-center justify-center gap-2"
             >
               <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0"></div>
               
@@ -105,19 +105,20 @@ export default function WelcomeSection() {
                     <FcGoogle className="text-[14px]" /> 
                   </div>
                   <span className="relative z-10">Continue with Google</span>
-                 
                   <div className="w-5 h-5 invisible shrink-0" />
                 </>
               )}
             </motion.button>
             
+            {/* MICROSOFT BUTTON */}
             <motion.button 
               type="button"
               onClick={() => handleButtonClick("microsoft")}
               disabled={loadingProvider !== null}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="relative w-full bg-[#2A2A2A] hover:bg-[#333] border border-white/10 text-white py-2.5 rounded-lg font-medium transition-colors text-xs flex items-center justify-center gap-2"
+              // ✅ CHANGED: text-xs -> text-sm
+              className="relative w-full bg-[#2A2A2A] hover:bg-[#333] border border-white/10 text-white py-2.5 rounded-lg font-medium transition-colors text-sm flex items-center justify-center gap-2"
             >
                {loadingProvider === "microsoft" ? (
                  <CgSpinner className="animate-spin text-white text-lg" />
@@ -127,7 +128,6 @@ export default function WelcomeSection() {
                     <FaMicrosoft className="text-white text-[14px]" />
                   </div>
                   <span className="relative z-10">Continue with Microsoft</span>
-
                   <div className="w-5 h-5 invisible shrink-0" />
                 </>
               )}
@@ -135,8 +135,11 @@ export default function WelcomeSection() {
 
           </div>
         </div>
+
+        {/* FOOTER TEXT */}
         <div className="w-[320px]"> 
-          <p className="text-white text-[11px] leading-relaxed text-left font-medium">
+          {/* ✅ CHANGED: text-[11px] -> text-xs */}
+          <p className="text-white text-xs leading-relaxed text-left font-medium">
             Read our detailed{" "}
             <span className="text-[#8B3DFF] underline decoration-[#8B3DFF] underline-offset-2 decoration-2 cursor-pointer hover:text-[#a260ff] transition-colors">
               Terms & Conditions
