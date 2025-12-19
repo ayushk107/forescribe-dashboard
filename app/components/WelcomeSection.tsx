@@ -41,10 +41,10 @@ export default function WelcomeSection() {
               </div>
             ) : (
               <>
-                <div className="absolute left-12 top-1/2 -translate-y-1/2">
+                <div className="absolute left-11 top-1/2 -translate-y-1/2">
                    <FaGoogle className="text-white text-lg" />
                 </div>
-                <span className="w-full text-center text-xs block pl-9">Continue with Google</span>
+                <span className="w-full text-center text-xs block pl-8">Continue with Google</span>
               </>
             )}
           </button>
