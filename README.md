@@ -4,7 +4,7 @@ A high-performance, pixel-perfect landing page built with **Next.js 16 (App Rout
 
 ## 🚀 Live Demo
 
-[**View the Live Application on Vercel**](https://forescribe-dashboard-7585.vercel.app/))
+[**View the Live Application on Vercel**](https://forescribe-dashboard-7585.vercel.app/)
 ---
 
 ## 🛠️ Tech Stack
