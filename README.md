@@ -1,10 +1,10 @@
-# Forescribe | Enterprise SaaS Landing Page
+# Forescribe | DASHBOARD
 
 A high-performance, pixel-perfect landing page built with **Next.js 16 (App Router)** and **TypeScript**. This project features a sophisticated staggered grid system, custom animations, and robust form handling.
 
 ## 🚀 Live Demo
 
-[**View the Live Application on Vercel**](https://your-vercel-link-here)
+[**View the Live Application on Vercel**](https://forescribe-dashboard-7585.vercel.app/))
 ---
 
 ## 🛠️ Tech Stack
@@ -40,7 +40,22 @@ A high-performance, pixel-perfect landing page built with **Next.js 16 (App Rout
     Open [http://localhost:3000](http://localhost:3000) to view the result.
 
 ---
+## 💡 Key Features
 
+* **OAuth Form Validation:** Integrated `react-hook-form` to handle a mandatory "Terms of Service" checkbox.
+* **Staggered Masonry Grid:** Implemented a custom 5-column grid that collapses to a single column on mobile.
+* **Performance Optimization:**
+    * **Dynamic Imports:** Used `next/dynamic` to split code chunks.
+    * **Next Image:** Automated WebP conversion and priority loading.
+
+---
+
+## ✅ Requirements Checklist
+
+- [x] **React Hooks:** Managed loading states with `useState` and form validation with `useForm`.
+- [x] **Advanced Animations:** Used `AnimatePresence` and `motion.div`.
+- [x] **TypeScript:** Full type safety.
+- [x] **Performance:** Dynamic components implemented.
 ## 📂 Directory Structure
 
 ```text
