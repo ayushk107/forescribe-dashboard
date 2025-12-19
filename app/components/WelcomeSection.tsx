@@ -18,7 +18,7 @@ export default function WelcomeSection() {
       className="flex flex-col items-center justify-center w-full"
     >
       <div className="bg-black/15 backdrop-blur-[5px] rounded-2xl shadow-xl border border-black/10 
-                      w-full max-w-[320px] 
+                      w-full max-w-[330px] 
                       pt-5 px-5 pb-6
                       flex flex-col items-center">
         <div className="flex flex-col items-center gap-2.5 w-full mb-5">
@@ -41,10 +41,10 @@ export default function WelcomeSection() {
               </div>
             ) : (
               <>
-                <div className="absolute left-7 top-1/2 -translate-y-1/2">
+                <div className="absolute left-12 top-1/2 -translate-y-1/2">
                    <FaGoogle className="text-white text-lg" />
                 </div>
-                <span className="w-full text-center text-xs block pl-2">Continue with Google</span>
+                <span className="w-full text-center text-xs block pl-9">Continue with Google</span>
               </>
             )}
           </button>
@@ -59,10 +59,10 @@ export default function WelcomeSection() {
                </div>
             ) : (
               <>
-                <div className="absolute left-7 top-1/2 -translate-y-1/2">
+                <div className="absolute left-11 top-1/2 -translate-y-1/2">
                    <FaMicrosoft className="text-lg" />
                 </div>
-                <span className="w-full text-center text-xs block pl-6">Continue with Microsoft</span>
+                <span className="w-full text-center text-xs block pl-12">Continue with Microsoft</span>
               </>
             )}
           </button>
