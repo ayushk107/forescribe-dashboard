@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Logo from "./components/Logo"; 
-
 const WelcomeSection = dynamic(() => import("./components/WelcomeSection"));
 export default function Home() {
   return (
